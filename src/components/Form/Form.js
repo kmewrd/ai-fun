@@ -6,8 +6,26 @@ const Form = () => {
   const [theme, setTheme] = useState('');
   const [error, setError] = useState(null);
 
-  const submitPrompt = () => {
-    fetchIdea(genre, theme).then(data => console.log(data));
+  const handleClick = e => {
+    e.preventDefault();
+    validateForm();
+  }
+
+  const validateForm = () => {
+    if (!genre) {
+      setError('Please select a genre from the dropdown menu.')
+    } else if (genre && !theme) {
+      submitPrompt(genre, 'None');
+    } else {
+      submitPrompt(genre, theme);
+    }
+  }
+
+  const submitPrompt = (genre, theme) => {
+    fetchIdea(genre, theme)
+      .then(data => console.log(data))
+      .catch(err => setError('Something went wrong. Please try again later.'));
+    clearForm();
   }
 
   const clearForm = () => {
@@ -34,7 +52,8 @@ const Form = () => {
       </select>
       <label htmlFor='theme-field'>Theme (optional)</label>
       <textarea id='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)}></textarea>
-      <button >Submit</button>
+      {error && <p>{error}</p>}
+      <button onClick={e => handleClick(e)}>Submit</button>
     </form>
   )
 }
