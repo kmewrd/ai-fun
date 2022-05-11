@@ -16,8 +16,10 @@ const Form = () => {
       setError('Please select a genre from the dropdown menu.')
     } else if (genre && !theme) {
       submitPrompt(genre, 'None');
+      setError(null);
     } else {
       submitPrompt(genre, theme);
+      setError(null);
     }
   }
 
@@ -31,7 +33,6 @@ const Form = () => {
   const clearForm = () => {
     setGenre('');
     setTheme('');
-    setError(null);
   }
 
   return (
