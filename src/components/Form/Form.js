@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import fetchIdea from '../../apiCalls';
 
-const Form = ({ setResults }) => {
+const Form = ({ setIdeas }) => {
   const [genre, setGenre] = useState('');
   const [theme, setTheme] = useState('');
   const [error, setError] = useState(null);
@@ -26,7 +26,7 @@ const Form = ({ setResults }) => {
   const submitPrompt = (genre, theme) => {
     fetchIdea(genre, theme)
       .then(data => {
-        setResults(prevState => [...prevState, {
+        setIdeas(prevState => [...prevState, {
           genre: genre,
           theme: theme,
           result: data.choices[0].text
