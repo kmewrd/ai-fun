@@ -1,8 +1,13 @@
 import { useState } from 'react';
+import fetchIdea from '../../apiCalls';
 
 const Form = () => {
   const [genre, setGenre] = useState('');
   const [theme, setTheme] = useState('');
+
+  const submitPrompt = () => {
+    fetchIdea(genre, theme).then(data => console.log(data));
+  }
 
   return (
     <form>
@@ -22,7 +27,7 @@ const Form = () => {
       </select>
       <label htmlFor='theme-field'>Theme (optional)</label>
       <textarea id='theme-field' placeholder='Example: College Roommates' value={theme} onChange={(e) => setTheme(e.target.value)}></textarea>
-      <button>Submit</button>
+      <button >Submit</button>
     </form>
   )
 }
