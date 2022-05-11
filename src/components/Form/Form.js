@@ -31,7 +31,7 @@ const Form = () => {
   const clearForm = () => {
     setGenre('');
     setTheme('');
-    setError('');
+    setError(null);
   }
 
   return (
