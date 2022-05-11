@@ -1,4 +1,4 @@
-const appId = process.env.OPEN_AI_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY
 
 const fetchIdea = (genre, theme) => {
   const completion = {
@@ -14,7 +14,7 @@ const fetchIdea = (genre, theme) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': appId
+      'Authorization': `Bearer ${apiKey}`
     },
     body: JSON.stringify(completion)
   }).then(response => response.json())
