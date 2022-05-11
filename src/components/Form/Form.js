@@ -6,7 +6,8 @@ const Form = () => {
 
   return (
     <form>
-      <select value={genre} onChange={(e) => setGenre(e.target.value)}>
+      <label htmlFor='genre-select'>Genre</label>
+      <select id='genre-select' value={genre} onChange={(e) => setGenre(e.target.value)}>
         <option value='' disabled>Any</option>
         <option value='Action'>Action</option>
         <option value='Comedy'>Comedy</option>
@@ -19,7 +20,9 @@ const Form = () => {
         <option value='Thriller'>Thriller</option>
         <option value='Western'>Western</option>
       </select>
-      <textarea placeholder='Enter your prompt here...' value={theme} onChange={(e) => setTheme(e.target.value)}></textarea>
+      <label htmlFor='theme-field'>Theme (optional)</label>
+      <textarea id='theme-field' placeholder='Example: College Roommates' value={theme} onChange={(e) => setTheme(e.target.value)}></textarea>
+      <button>Submit</button>
     </form>
   )
 }
