@@ -4,9 +4,16 @@ import fetchIdea from '../../apiCalls';
 const Form = () => {
   const [genre, setGenre] = useState('');
   const [theme, setTheme] = useState('');
+  const [error, setError] = useState(null);
 
   const submitPrompt = () => {
     fetchIdea(genre, theme).then(data => console.log(data));
+  }
+
+  const clearForm = () => {
+    setGenre('');
+    setTheme('');
+    setError('');
   }
 
   return (
@@ -26,7 +33,7 @@ const Form = () => {
         <option value='Western'>Western</option>
       </select>
       <label htmlFor='theme-field'>Theme (optional)</label>
-      <textarea id='theme-field' placeholder='Example: College Roommates' value={theme} onChange={(e) => setTheme(e.target.value)}></textarea>
+      <textarea id='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)}></textarea>
       <button >Submit</button>
     </form>
   )
