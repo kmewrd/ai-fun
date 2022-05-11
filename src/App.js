@@ -1,10 +1,12 @@
 import './App.css';
+import Form from './components/Form/Form';
 
 const App = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <main className="App">
+      <h1>Movie Idea Generator</h1>
+      <Form />
+    </main>
   );
 }
 
