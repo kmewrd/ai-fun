@@ -51,7 +51,7 @@ const Form = () => {
         <option value='Western'>Western</option>
       </select>
       <label htmlFor='theme-field'>Theme (optional)</label>
-      <textarea id='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)}></textarea>
+      <input id='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
       {error && <p>{error}</p>}
       <button onClick={e => handleClick(e)}>Submit</button>
     </form>
