@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 form {
   /* border: 1px solid red; */
   display: flex;
@@ -31,6 +33,8 @@ form > button {
   color: #fff;
   background-color: #000;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .input-wrapper {
