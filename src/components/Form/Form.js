@@ -27,11 +27,11 @@ const Form = ({ setIdeas }) => {
   const submitPrompt = (genre, theme) => {
     fetchIdea(genre, theme)
       .then(data => {
-        setIdeas(prevState => [...prevState, {
+        setIdeas(prevState => [{
           genre: genre,
           theme: theme,
           result: data.choices[0].text
-        }])
+        }, ...prevState])
       })
       .catch(err => setError('Something went wrong. Please try again later.'));
     clearForm();
