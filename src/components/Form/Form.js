@@ -59,10 +59,8 @@ const Form = ({ setIdeas }) => {
           <option value='Thriller'>Thriller</option>
           <option value='Western'>Western</option>
         </select>
-      </div>
-      <div className='input-wrapper'>
         <label htmlFor='theme-field'>Theme (optional)</label>
-        <input id='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
+        <input id='theme-field' className='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
         {error && <p>{error}</p>}
       </div>
       <button onClick={e => handleClick(e)}>Submit</button>
