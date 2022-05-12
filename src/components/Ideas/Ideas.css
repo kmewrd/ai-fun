@@ -8,4 +8,5 @@ h2 {
   flex-direction: column;
   align-items: center;
   width: 75%;
+  padding-bottom: 2.8em;
 }
