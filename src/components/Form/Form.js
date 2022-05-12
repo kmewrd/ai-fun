@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import fetchIdea from '../../apiCalls';
+import './Form.css';
 
 const Form = ({ setIdeas }) => {
   const [genre, setGenre] = useState('');
@@ -43,23 +44,27 @@ const Form = ({ setIdeas }) => {
 
   return (
     <form>
-      <label htmlFor='genre-select'>Genre</label>
-      <select id='genre-select' value={genre} onChange={(e) => setGenre(e.target.value)}>
-        <option value='' disabled>Any</option>
-        <option value='Action'>Action</option>
-        <option value='Comedy'>Comedy</option>
-        <option value='Drama'>Drama</option>
-        <option value='Fantasy'>Fantasy</option>
-        <option value='Horror'>Horror</option>
-        <option value='Mystery'>Mystery</option>
-        <option value='Romance'>Romance</option>
-        <option value='Sci-Fi'>Sci-Fi</option>
-        <option value='Thriller'>Thriller</option>
-        <option value='Western'>Western</option>
-      </select>
-      <label htmlFor='theme-field'>Theme (optional)</label>
-      <input id='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
-      {error && <p>{error}</p>}
+      <div className='input-wrapper'>
+        <label htmlFor='genre-select'>Genre</label>
+        <select id='genre-select' value={genre} onChange={(e) => setGenre(e.target.value)}>
+          <option value='' disabled>Any</option>
+          <option value='Action'>Action</option>
+          <option value='Comedy'>Comedy</option>
+          <option value='Drama'>Drama</option>
+          <option value='Fantasy'>Fantasy</option>
+          <option value='Horror'>Horror</option>
+          <option value='Mystery'>Mystery</option>
+          <option value='Romance'>Romance</option>
+          <option value='Sci-Fi'>Sci-Fi</option>
+          <option value='Thriller'>Thriller</option>
+          <option value='Western'>Western</option>
+        </select>
+      </div>
+      <div className='input-wrapper'>
+        <label htmlFor='theme-field'>Theme (optional)</label>
+        <input id='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
+        {error && <p>{error}</p>}
+      </div>
       <button onClick={e => handleClick(e)}>Submit</button>
     </form>
   )
