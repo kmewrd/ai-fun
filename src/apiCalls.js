@@ -2,7 +2,7 @@ const apiKey = process.env.REACT_APP_API_KEY
 
 const fetchIdea = (genre, theme) => {
   const completion = {
-    "prompt": `Genre: Thriller\nTheme (optional): Murder\nOne-Sentence Movie Idea: The spouse of a dedicated method actor begins to wonder if their latest role has gotten \"stuck\" with them - when bodies begin turning up in ways reminiscent of their latest movie, about a brilliant and methodical serial killer.\n    \nGenre: ${genre}\nTheme (optional): ${theme}\nOne-Sentence Movie Idea:`,
+    "prompt": `Genre: Mystery\nTheme (optional): None\nOne-Sentence Movie Idea: In search of an Instagram-worthy photo location, a content creator takes a few wrong turns and ends up discovering a charming small American hamlet that has remained unchanged by the outside world since the 1950s.\n    \nGenre: ${genre}\nTheme (optional): ${theme}\nOne-Sentence Movie Idea:`,
     "temperature": 0,
     "max_tokens": 60,
     "top_p": 1,
