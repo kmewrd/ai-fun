@@ -8,7 +8,7 @@ const Ideas = ({ ideas }) => {
   return (
     <section className='ideas-wrapper'>
       <h2>Results</h2>
-      {cards.length ? cards : <p>No ideas to display - yet!</p>}
+      {cards.length ? cards : <p>No ideas to display...yet!</p>}
     </section>
   )
 }

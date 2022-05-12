@@ -45,7 +45,7 @@ const Form = ({ setIdeas }) => {
   return (
     <form>
       <div className='input-wrapper'>
-        <label htmlFor='genre-select'>Genre</label>
+        <label htmlFor='genre-select'>Genre:</label>
         <select id='genre-select' value={genre} onChange={(e) => setGenre(e.target.value)}>
           <option value='' disabled>Any</option>
           <option value='Action'>Action</option>
@@ -59,7 +59,7 @@ const Form = ({ setIdeas }) => {
           <option value='Thriller'>Thriller</option>
           <option value='Western'>Western</option>
         </select>
-        <label htmlFor='theme-field'>Theme (optional)</label>
+        <label htmlFor='theme-field'>Theme (optional):</label>
         <input id='theme-field' className='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
         {error && <p>{error}</p>}
       </div>
