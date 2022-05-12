@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 form {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -40,7 +39,6 @@ form > button {
 
 .input-wrapper {
   width: 90%;
-  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
 }
