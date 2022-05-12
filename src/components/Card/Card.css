@@ -1,11 +1,16 @@
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .card {
-  /* border: 1px solid pink; */
   background-color: #fff;
   border-radius: 0.6em;
   width: 90%;
   margin: 0.8rem;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.unbold {
+  font-weight: normal;
 }
