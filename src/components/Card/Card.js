@@ -1,13 +1,14 @@
 import React from 'react';
+import './Card.css';
 
 const Card = ({ genre, theme, result }) => {
   return (
-    <div>
-      <h2>Genre:</h2>
+    <div className='card'>
+      <h3>Genre:</h3>
       <p>{genre}</p>
-      <h2>Theme:</h2>
+      <h3>Theme:</h3>
       <p>{theme}</p>
-      <h2>Result:</h2>
+      <h3>Result:</h3>
       <p>{result}</p>
     </div>
   )

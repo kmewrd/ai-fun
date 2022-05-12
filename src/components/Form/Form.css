@@ -5,7 +5,8 @@ form {
   justify-content: space-evenly;
   align-items: center;
   width: 75%;
-  height: 12rem;
+  height: 14rem;
+  box-sizing: border-box;
 }
 
 label {
@@ -33,6 +34,7 @@ form > button {
 
 .input-wrapper {
   width: 90%;
+  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
 }
