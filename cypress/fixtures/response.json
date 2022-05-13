@@ -1,0 +1,14 @@
+{
+  "id": "cmpl-57E6959ZHMNnJUThyWnBiWJBUHrWH",
+  "object": "text_completion",
+  "created": 1652404173,
+  "model": "text-curie-001",
+  "choices": [
+    {
+      "text": " A group of astronauts are sent to Mars to find a new home for humanity, but they quickly realize that the planet is not as peaceful as they thought it was.",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ]
+}
