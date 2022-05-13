@@ -59,6 +59,10 @@ form > button:hover {
   flex-grow: 1;
 }
 
+.error-message {
+  font-style: italic;
+}
+
 @media screen and (max-width: 1149px) {
   .inputs-wrapper {
     flex-direction: column;

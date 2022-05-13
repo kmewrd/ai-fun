@@ -68,7 +68,7 @@ const Form = ({ setIdeas, setIsLoading }) => {
           <input id='theme-field' className='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
         </div>
       </div>
-      {error && <p>{error}</p>}
+      {error && <p className='error-message'>{error}</p>}
       <button onClick={e => handleClick(e)}>SUBMIT</button>
     </form>
   )
