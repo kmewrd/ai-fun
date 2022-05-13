@@ -12,7 +12,7 @@ form {
 
 label {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 input,
@@ -43,12 +43,58 @@ form > button:hover {
   color: #000;
 }
 
-.input-wrapper {
+.inputs-wrapper {
   width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.single-input {
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
 .theme-field {
   flex-grow: 1;
+}
+
+@media screen and (max-width: 1149px) {
+  .inputs-wrapper {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .single-input {
+    max-height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0.4em 0;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  form {
+    height: 19rem;
+  }
+
+  .inputs-wrapper {
+    margin-bottom: 1rem;
+  }
+  
+  .single-input {
+    flex-direction: column;
+    max-height: 80px;
+  }
+
+  input,
+  select {
+    font-size: 1.2rem;
+    height: 2.4rem;
+  }
+
+  .theme-field {
+    width: 90%;
+  }
 }
