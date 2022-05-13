@@ -5,12 +5,13 @@ import Ideas from './components/Ideas/Ideas';
 
 const App = () => {
   const [ideas, setIdeas] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <main className="App">
       <h1>Movie Idea Generator</h1>
-      <Form setIdeas={setIdeas}/>
-      <Ideas ideas={ideas}/>
+      <Form setIdeas={setIdeas} setIsLoading={setIsLoading} />
+      <Ideas ideas={ideas} isLoading={isLoading} />
     </main>
   );
 }

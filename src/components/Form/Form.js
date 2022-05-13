@@ -2,7 +2,7 @@ import { useState } from 'react';
 import fetchIdea from '../../apiCalls';
 import './Form.css';
 
-const Form = ({ setIdeas }) => {
+const Form = ({ setIdeas, setIsLoading }) => {
   const [genre, setGenre] = useState('');
   const [theme, setTheme] = useState('');
   const [error, setError] = useState(null);
@@ -25,6 +25,7 @@ const Form = ({ setIdeas }) => {
   }
 
   const submitPrompt = (genre, theme) => {
+    setIsLoading(true);
     fetchIdea(genre, theme)
       .then(data => {
         setIdeas(prevState => [{
@@ -33,7 +34,8 @@ const Form = ({ setIdeas }) => {
           result: data.choices[0].text
         }, ...prevState])
       })
-      .catch(err => setError('Something went wrong. Please try again later.'));
+      .catch(err => setError('Something went wrong. Please try again later.'))
+      .finally(() => setIsLoading(false));
     clearForm();
   }
 
