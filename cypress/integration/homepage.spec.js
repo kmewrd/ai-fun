@@ -56,3 +56,21 @@ describe('Homepage', () => {
       .and('contain', 'Result: A group of astronauts are sent to Mars to find a new home for humanity, but they quickly realize that the planet is not as peaceful as they thought it was.')
   })
 })
+
+describe('Error Handling', () => {
+  beforeEach(() => {
+    cy.intercept('POST', 'https://api.openai.com/v1/engines/text-curie-001/completions', { forceNetworkError: true }).as('network error')
+
+    cy.visit('http://localhost:3000/');
+  })
+
+  it('should not allow a user to submit the form without a genre', () => {
+    cy.get('input[id="theme-field"]')
+      .type('Mars')
+      .get('form button')
+      .click()
+    
+    cy.get('form')
+      .contains('Please select a genre from the dropdown menu.')
+  })
+})
