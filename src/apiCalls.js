@@ -19,7 +19,7 @@ const fetchIdea = (genre, theme) => {
     body: JSON.stringify(completion)
   }).then(response => {
     if (!response.ok) {
-      throw new Error;
+      throw new Error();
     } else {
       response.json();
     }
