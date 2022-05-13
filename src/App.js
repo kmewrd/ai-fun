@@ -16,6 +16,11 @@ const App = () => {
     localStorage.setItem('ideas', JSON.stringify(ideas));
   }, [ideas]);
 
+  const deleteIdea = id => {
+    const filteredIdeas = ideas.filter(idea => idea.id !== id);
+    setIdeas(filteredIdeas);
+  }
+
   return (
     <main className="App">
       <h1>Movie Idea Generator</h1>
