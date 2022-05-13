@@ -27,6 +27,7 @@ This application allows users to generate a one- or two-sentence movie idea by s
 - Submission form that gets a random movie idea
 - Loading component/animation
 - 100% Lighthouse Accessibility Audit Score
+- Responsive layout
 
 ---
 
