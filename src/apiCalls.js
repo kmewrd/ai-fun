@@ -17,7 +17,13 @@ const fetchIdea = (genre, theme) => {
       'Authorization': `Bearer ${apiKey}`
     },
     body: JSON.stringify(completion)
-  }).then(response => response.json())
+  }).then(response => {
+    if (!response.ok) {
+      throw new Error;
+    } else {
+      response.json();
+    }
+  })
 }
 
 export default fetchIdea;
