@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card';
+import ReactLoading from 'react-loading';
 import './Ideas.css';
 
 const Ideas = ({ ideas }) => {
