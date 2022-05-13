@@ -72,5 +72,23 @@ describe('Error Handling', () => {
     
     cy.get('form')
       .contains('Please select a genre from the dropdown menu.')
+    
+    cy.get('section[class="ideas-wrapper"]')
+      .contains('No ideas to display...yet!')
+  })
+
+  it('should show an error message if there is a network failure', () => {
+    cy.get('select[id="genre-select"]')
+      .select('Sci-Fi')
+      .get('input[id="theme-field"]')
+      .type('Mars')
+      .get('form button')
+      .click()
+
+    cy.get('form')
+      .contains('Something went wrong. Please try again later.')
+    
+    cy.get('section[class="ideas-wrapper"]')
+      .contains('No ideas to display...yet!')
   })
 })
