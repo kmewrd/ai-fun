@@ -25,16 +25,22 @@ select {
 }
 
 form > button {
-  border: 0;
+  border: 3px solid #000;
   height: 3rem;
   width: 15rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #fff;
   background-color: #000;
   border-radius: 0.4em;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+form > button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
 }
 
 .input-wrapper {
