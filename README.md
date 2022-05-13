@@ -31,6 +31,8 @@ This application allows users to generate a one- or two-sentence movie idea by s
 - 100% Lighthouse Accessibility Audit Score
 - Responsive layout
 
+![Project demo gif](https://user-images.githubusercontent.com/79027364/168400913-83c96354-0997-403b-9204-af454103b321.gif)
+
 ---
 
 ## Technologies Used
