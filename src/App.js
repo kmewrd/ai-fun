@@ -25,7 +25,7 @@ const App = () => {
     <main className="App">
       <h1>Movie Idea Generator</h1>
       <Form setIdeas={setIdeas} setIsLoading={setIsLoading} />
-      <Ideas ideas={ideas} isLoading={isLoading} />
+      <Ideas ideas={ideas} isLoading={isLoading} deleteIdea={deleteIdea} />
     </main>
   );
 }
