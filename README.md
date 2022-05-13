@@ -45,5 +45,4 @@ This application allows users to generate a one- or two-sentence movie idea by s
 - VS Code
 
 ### Future Additions & Improvements
-- Add an "I'm Feeling Lucky" button that generates an idea based on a random genre and selection from a bank of themes.
-- Add local storage to view results on refresh.
+- Add a "Surpise Me" button that generates an idea based on a random genre and selection from a bank of themes.
