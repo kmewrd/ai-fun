@@ -8,7 +8,7 @@ const Card = ({ genre, theme, result, id, deleteIdea }) => {
       <h3>Theme: <span className='unbold'>{theme}</span></h3>
       <h3>Result:</h3>
       <p>{result}</p>
-      <button onClick={() => deleteIdea(id)}>Delete</button>
+      <button aria-label='Delete Idea' onClick={() => deleteIdea(id)}>DELETE</button>
     </div>
   )
 }
