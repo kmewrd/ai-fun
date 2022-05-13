@@ -25,12 +25,12 @@ select {
 }
 
 form > button {
-  border: 3px solid #000;
+  border: 3px solid #693DE6;
   height: 3rem;
   width: 15rem;
   font-size: 1.4rem;
   color: #fff;
-  background-color: #000;
+  background-color: #693DE6;
   border-radius: 0.4em;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
@@ -40,7 +40,7 @@ form > button {
 
 form > button:hover {
   background-color: rgba(0, 0, 0, 0);
-  color: #000;
+  color: #693DE6;
 }
 
 .inputs-wrapper {
