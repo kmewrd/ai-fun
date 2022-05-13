@@ -61,8 +61,8 @@ const Form = ({ setIdeas }) => {
         </select>
         <label htmlFor='theme-field'>Theme (optional):</label>
         <input id='theme-field' className='theme-field' placeholder='Example: Space Cowboys' value={theme} onChange={(e) => setTheme(e.target.value)} />
-        {error && <p>{error}</p>}
       </div>
+      {error && <p>{error}</p>}
       <button onClick={e => handleClick(e)}>SUBMIT</button>
     </form>
   )
