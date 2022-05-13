@@ -2,9 +2,9 @@ const apiKey = process.env.REACT_APP_API_KEY
 
 const fetchIdea = (genre, theme) => {
   const completion = {
-    "prompt": `Genre: Thriller\nTheme (optional): None\nOne-Sentence Movie Idea: An incredibly wealthy film student refuses to acknowledge that his favorite actor, recently deceased, will not be able to star in his thesis film, so he has him brought back from the dead - but the movie star, reanimated, now has other plans.\n    \nGenre: ${genre}\nTheme (optional): ${theme}\nOne-Sentence Movie Idea:`,
-    "temperature": 0,
-    "max_tokens": 60,
+    "prompt": `Genre: Thriller\nTheme (optional): None\nOne-Sentence Movie Idea: An incredibly wealthy film student refuses to acknowledge that his favorite actor, recently deceased, will not be able to star in his thesis film, so he has him brought back from the dead - but the movie star, reanimated, now has other plans.\n\nGenre: ${genre}\nTheme (optional): ${theme}\nOne-Sentence Movie Idea:`,
+    "temperature": 0.7,
+    "max_tokens": 256,
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0
@@ -21,7 +21,7 @@ const fetchIdea = (genre, theme) => {
     if (!response.ok) {
       throw new Error();
     } else {
-      response.json();
+      return response.json();
     }
   })
 }
