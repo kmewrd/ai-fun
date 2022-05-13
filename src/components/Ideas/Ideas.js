@@ -3,8 +3,8 @@ import Card from '../Card/Card';
 import ReactLoading from 'react-loading';
 import './Ideas.css';
 
-const Ideas = ({ ideas, isLoading }) => {
-  const cards = ideas.map(idea => <Card key={idea.result} genre={idea.genre} theme={idea.theme} result={idea.result} />)
+const Ideas = ({ ideas, isLoading, deleteIdea }) => {
+  const cards = ideas.map(idea => <Card key={idea.result} id={idea.id} genre={idea.genre} theme={idea.theme} result={idea.result} deleteIdea={deleteIdea} />)
 
   return (
     <section className='ideas-wrapper'>

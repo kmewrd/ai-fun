@@ -9,7 +9,7 @@
 
 This application allows users to generate a one- or two-sentence movie idea by sending a genre and optional theme to the [Open AI API](https://beta.openai.com/). Results are displayed in a list and include the genre, theme, and idea on each result card.
 
-![Homepage with single result listed](https://user-images.githubusercontent.com/79027364/168395537-9364b120-3ed5-4d33-8e8c-d078d5698ac7.png)
+![Homepage with single result listed](https://user-images.githubusercontent.com/79027364/168400389-2e00203d-9b02-4070-bd4b-a66eb5347826.png)
 
 ## How to Run
 
@@ -26,8 +26,12 @@ This application allows users to generate a one- or two-sentence movie idea by s
 
 - Submission form that generates a random movie idea
 - Loading component/animation
+- Local storage
+- Ability to delete an idea from the results
 - 100% Lighthouse Accessibility Audit Score
 - Responsive layout
+
+![Project demo gif](https://user-images.githubusercontent.com/79027364/168400913-83c96354-0997-403b-9204-af454103b321.gif)
 
 ---
 
@@ -41,5 +45,4 @@ This application allows users to generate a one- or two-sentence movie idea by s
 - VS Code
 
 ### Future Additions & Improvements
-- Add an "I'm Feeling Lucky" button that generates an idea based on a random genre and selection from a bank of themes.
-- Add local storage to view results on refresh.
+- Add a "Surpise Me" button that generates an idea based on a random genre and selection from a bank of themes.

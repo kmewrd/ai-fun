@@ -31,6 +31,7 @@ const Form = ({ setIdeas, setIsLoading }) => {
         setIdeas(prevState => [{
           genre: genre,
           theme: theme,
+          id: data.created,
           result: data.choices[0].text
         }, ...prevState])
       })

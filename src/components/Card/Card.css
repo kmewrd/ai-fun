@@ -9,6 +9,29 @@ h3 {
   margin: 0.8rem;
   box-sizing: border-box;
   padding: 1em;
+  position: relative;
+}
+
+.card button {
+  border: 3px solid #693DE6;
+  height: 2.4rem;
+  width: 6rem;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: #693DE6;
+  border-radius: 0.4em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.card button:hover {
+  color: #fff;
+  background-color: #693DE6;
 }
 
 .unbold {
