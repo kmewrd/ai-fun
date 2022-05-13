@@ -6,15 +6,15 @@ import Ideas from './components/Ideas/Ideas';
 const App = () => {
   const [ideas, setIdeas] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  
+  useEffect(() => {
+    localStorage.setItem('ideas', JSON.stringify(ideas));
+  }, [ideas]);
 
   useEffect(() => {
     const storedIdeas = JSON.parse(localStorage.getItem('ideas'));
     storedIdeas.length && setIdeas(storedIdeas);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('ideas', JSON.stringify(ideas));
-  }, [ideas]);
 
   const deleteIdea = id => {
     const filteredIdeas = ideas.filter(idea => idea.id !== id);
