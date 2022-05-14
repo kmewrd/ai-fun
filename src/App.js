@@ -8,13 +8,15 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   
   useEffect(() => {
-    localStorage.setItem('ideas', JSON.stringify(ideas));
-  }, [ideas]);
+    if (localStorage.getItem('ideas')) {
+      const storedIdeas = JSON.parse(localStorage.getItem('ideas'));
+      storedIdeas.length && setIdeas(storedIdeas);
+    }
+  }, []);
 
   useEffect(() => {
-    const storedIdeas = JSON.parse(localStorage.getItem('ideas'));
-    storedIdeas.length && setIdeas(storedIdeas);
-  }, []);
+    localStorage.setItem('ideas', JSON.stringify(ideas));
+  }, [ideas]);  
 
   const deleteIdea = id => {
     const filteredIdeas = ideas.filter(idea => idea.id !== id);
