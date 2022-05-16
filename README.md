@@ -15,9 +15,9 @@ This application allows users to generate a one- or two-sentence movie idea by s
 
 ```
 1. Clone the repo down to your machine
-2. Open the root directory for each repo and run `npm i` to install dependencies
+2. Open the root directory and run `npm i` to install dependencies
 4. Run `npm start` to initialize the webpage
-5. Open the site by copying and pasting the server location http://localhost:3000/ in your address bar
+5. If the site doesn't automatically open, copy and paste the server location http://localhost:3000/ in your address bar
 ```
 
 ---
@@ -26,10 +26,9 @@ This application allows users to generate a one- or two-sentence movie idea by s
 
 - Submission form that generates a random movie idea
 - Loading component/animation
-- Local storage
-- Ability to delete an idea from the results
 - 100% Lighthouse Accessibility Audit Score
 - Responsive layout
+- Stretch Feature: Local storage, including the ability to delete an idea from results
 
 ![Project demo gif](https://user-images.githubusercontent.com/79027364/168400913-83c96354-0997-403b-9204-af454103b321.gif)
 
@@ -46,3 +45,6 @@ This application allows users to generate a one- or two-sentence movie idea by s
 
 ### Future Additions & Improvements
 - Add a "Surpise Me" button that generates an idea based on a random genre and selection from a bank of themes.
+
+## Reflections
+As a “stretch tech” for this challenge, I chose to use the Web Storage API to save movie ideas in the client’s local storage. This enables a user to view the ideas they’ve generated even if they navigate away from the page and return later. Before this project I had never used local storage, but it seemed like a lightweight way to save responses without building out a server. While React Hooks made the implementation of this feature fairly straightforward, it did take some troubleshooting to ensure that Hooks were called in the right order and that local storage was not cleared or reset on page refresh.
