@@ -17,10 +17,10 @@ This application allows users to generate a one- or two-sentence movie idea by s
 1. Clone the repo down to your machine
 2. Sign up for an API key from OpenAI
 3. Open the root directory of your cloned repo
-3. Create a .env.local file and store your API key as REACT_APP_API_KEY
-4. Run `npm i` to install dependencies
-5. Run `npm start` to initialize the webpage
-6. If the site doesn't automatically open, copy and paste the server location in your address bar
+4. Create a .env.local file and store your API key as REACT_APP_API_KEY
+5. Run `npm i` to install dependencies
+6. Run `npm start` to initialize the webpage
+7. If the site doesn't automatically open, copy and paste the server location in your address bar
 ```
 
 ---
