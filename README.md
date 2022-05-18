@@ -7,7 +7,7 @@
 
 ## Description
 
-This application allows users to generate a one- or two-sentence movie idea by sending a genre and optional theme to the [Open AI API](https://beta.openai.com/). Results are displayed in a list and include the genre, theme, and idea on each result card.
+This application allows users to generate a one- or two-sentence movie idea by sending a genre and optional theme to the [OpenAI API](https://beta.openai.com/). Results are displayed in a list and include the genre, theme, and idea on each result card.
 
 ![Homepage with single result listed](https://user-images.githubusercontent.com/79027364/168400389-2e00203d-9b02-4070-bd4b-a66eb5347826.png)
 
@@ -15,9 +15,12 @@ This application allows users to generate a one- or two-sentence movie idea by s
 
 ```
 1. Clone the repo down to your machine
-2. Open the root directory and run `npm i` to install dependencies
-4. Run `npm start` to initialize the webpage
-5. If the site doesn't automatically open, copy and paste the server location http://localhost:3000/ in your address bar
+2. Sign up for an API key from OpenAI
+3. Open the root directory of your cloned repo
+3. Create a .env.local file and store your API key as REACT_APP_API_KEY
+4. Run `npm i` to install dependencies
+5. Run `npm start` to initialize the webpage
+6. If the site doesn't automatically open, copy and paste the server location in your address bar
 ```
 
 ---
